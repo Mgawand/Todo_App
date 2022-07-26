@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import "./components/root.style.css";
+import Header from "./components/Header";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import TodoItem from "./components/TodoItem";
+import { Footer } from "./components/Footer";
 
 function App() {
+  const [themeLight, setThemeLight] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header themeLight={themeLight} setThemeLight={setThemeLight} />
+      <TodoForm />
+      <TodoList />
+      <TodoItem />
+      <Footer />
     </div>
   );
 }
