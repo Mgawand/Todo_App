@@ -6,6 +6,7 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoItem from "./components/TodoItem";
 import { Footer } from "./components/Footer";
+import TodoFilterControl from "./components/TodoFilterControl";
 
 function App() {
   const [themeLight, setThemeLight] = useState(true);
@@ -15,6 +16,7 @@ function App() {
       <TodoForm />
       <TodoList />
       <TodoItem />
+      <TodoFilterControl />
       <Footer />
     </div>
   );
