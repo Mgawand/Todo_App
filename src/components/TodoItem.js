@@ -3,7 +3,6 @@ import IconCheck from "../images/icon-check.svg";
 
 const TodoItem = ({ todo, setTodos, todos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo);
-
   const classes = mutableTodo.completed ? "completed" : "";
   const checkIcon = mutableTodo.completed ? (
     <img src={IconCheck} alt="Completed" />
@@ -18,12 +17,13 @@ const TodoItem = ({ todo, setTodos, todos }) => {
     );
     setTodos(updatedTodos);
   };
+
   return (
     <>
       <li className={classes}>
-        <label for={`todoCheckbox-${todo.id}`}>Completed checkbox</label>
+        <label htmlFor={`todoCheckbox-${todo.id}`}>Completed checkbox</label>
         <input
-          type="Chechbox"
+          type="Checkbox"
           id={`todoCheckbox=${todo.id}`}
           name="completed"
           defaultChecked={mutableTodo.completed}

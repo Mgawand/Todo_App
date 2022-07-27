@@ -7,7 +7,7 @@ const TodoFilterControl = ({ filter, setFilter }) => {
   return (
     <div className="control-btn group">
       <button
-        className={filter === "all" ? "btn actice" : "btn"}
+        className={filter === "all" ? "btn active" : "btn"}
         onClick={() => handleClick("all")}
       >
         All
@@ -15,16 +15,16 @@ const TodoFilterControl = ({ filter, setFilter }) => {
 
       <button
         className={filter === "active" ? "btn active" : "btn"}
-        onClick={() => HTMLHeadingElement("active")}
+        onClick={() => handleClick("active")}
       >
         Active
       </button>
 
       <button
         className={filter === "completed" ? "btn active" : "btn"}
-        onClick={() => HTMLHeadingElement("completed")}
+        onClick={() => handleClick("completed")}
       >
-        Active
+        Completed
       </button>
     </div>
   );

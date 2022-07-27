@@ -10,7 +10,7 @@ const Header = ({ themeLight, setThemeLight }) => {
   };
 
   return (
-    <header>
+    <header className="header-container">
       <h1>TODO</h1>
       <button className="btn " onClick={switchTheme}>
         <img src={switchThemeIcon} alt="Light Theme" />

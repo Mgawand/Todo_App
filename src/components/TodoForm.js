@@ -24,7 +24,7 @@ const TodoForm = ({ todos, setTodos }) => {
     }
   };
   return (
-    <div className="main-container">
+    <div className="form-container">
       <div className="checkbox-border">
         <span className="checkbox"></span>
       </div>
@@ -38,7 +38,7 @@ const TodoForm = ({ todos, setTodos }) => {
           value={todoInput}
           onChange={handleChange}
         />
-        <button id="submitNewTdo" type="submit">
+        <button id="submitNewTodo" type="submit">
           Add Todo
         </button>
       </form>
