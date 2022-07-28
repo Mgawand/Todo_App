@@ -23,7 +23,7 @@ const TodoItem = ({ todo, setTodos, todos }) => {
       <li className={classes}>
         <label htmlFor={`todoCheckbox-${todo.id}`}>Completed checkbox</label>
         <input
-          type="Checkbox"
+          type="checkbox"
           id={`todoCheckbox=${todo.id}`}
           name="completed"
           defaultChecked={mutableTodo.completed}

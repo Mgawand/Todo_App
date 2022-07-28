@@ -17,9 +17,8 @@
   --very-dark-grayish-blue: hsl(233, 14%, 35%);
   --very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
 
-  --linear-graient-start: hsl(192, 100%, 67%);
-  --linear-gradient-end: hsl(280, 87%, 65%)
-
+  --linear-gradient-start: hsl(192, 100%, 67%);
+  --linear-gradient-end: hsl(280, 87%, 65%);
 
   /* Font size */
   --font-size: 18px;
@@ -66,11 +65,11 @@ body {
 }
 .wrapper.light input[type="checkbox"],
 .wrapper.light button.active {
-  color:hsl(220, 98%, 61%);
+  color: hsl(220, 98%, 61%);
 }
 .wrapper.light input[type="checkbox"],
 .wrapper.light button:hover {
-  color:#212529;
+  color: #212529;
 }
 
 /* wrapper dark */
@@ -80,15 +79,15 @@ body {
 }
 .wrapper.dark input[type="checkbox"],
 .wrapper.dark button.active {
-  color:hsl(220, 98%, 61%);
+  color: hsl(220, 98%, 61%);
 }
 .wrapper.dark input[type="checkbox"],
 .wrapper.dark button:hover {
   color: var(--light-grayish-blue);
 }
 
-.wrapper.dark .form-container form input::placeholder{
-  color:var(--light-grayish-blue);
+.wrapper.dark .form-container form input::placeholder {
+  color: var(--light-grayish-blue);
 }
 
 .header-container {
@@ -133,17 +132,21 @@ h1 {
 .wrapper.dark .form-container {
   background-color: var(--very-dark-grayish-blue);
 }
-.wrapper.dark form input[type="text"]{
+.wrapper.dark form input[type="text"] {
   background-color: var(--very-dark-grayish-blue);
-
 }
 
 .checkbox-border {
   border-radius: 50%;
+  border-color: linear-gradient(
+    to bottom right,
+    var(--linear-gradient-start),
+    var(--linear-gradient-end)
+  );
   background: var(--very-light-grayish-blue);
 }
 
-.wrapper.dark .checkbox-border{
+.wrapper.dark .checkbox-border {
   background: var(--very-dark-grayish-blue);
 }
 
@@ -155,16 +158,8 @@ h1 {
   width: 2rem;
   cursor: pointer;
   border-radius: inherit;
-  /* border: 1px solid hsl(220, 98%, 61%); */
-
 }
 
-
-
-.todo-list li.completed .checkbox-border:hover{
-  background: linear-gradient(to bottom right, var(--linear-graient-start), var(--linear-gradient-end));
-
-}
 .todo-list li:last-child {
   border-bottom: none;
 }
@@ -175,7 +170,7 @@ p {
   cursor: pointer;
 }
 
-.todo-list-container .todo-list li.completed{
+.todo-list-container .todo-list li.completed {
   text-decoration: line-through;
 }
 .todo-list-container {
@@ -190,7 +185,6 @@ p {
 
 .wrapper.dark .todo-list-container {
   background-color: var(--very-dark-grayish-blue);
-
 }
 .todo-list {
   padding: 0;
@@ -202,6 +196,9 @@ p {
 
 .todo-input {
   border: none;
+}
+.todo-input:focus {
+  outline: none;
 }
 .todo-list li label,
 .todo-list li input[type="checkbox"] {

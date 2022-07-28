@@ -8,12 +8,12 @@ import { Footer } from "./components/Footer";
 const data = [
   {
     id: 1,
-    content: "Complete js course",
+    content: "Complete udemy js course",
     completed: false,
   },
   {
     id: 2,
-    content: "Completed js course",
+    content: "Completed udacity course",
     completed: true,
   },
 ];
