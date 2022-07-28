@@ -236,6 +236,24 @@ p {
   background: transparent;
 }
 
+.remove {
+  border: none;
+  background: transparent;
+  z-index: 2;
+  display: none;
+}
+
+.remove-btn {
+  padding-left: 28rem;
+}
+
+li:hover .remove {
+  display: block;
+}
+
+.wrapper.dark .remove {
+  background: white;
+}
 footer {
   width: 100%;
   padding: 2rem;

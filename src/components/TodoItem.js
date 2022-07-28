@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import IconCheck from "../images/icon-check.svg";
+import IconCross from "../images/icon-cross.svg";
 
-const TodoItem = ({ todo, setTodos, todos }) => {
+const TodoItem = ({ todo, index, setTodos, todos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo);
   const classes = mutableTodo.completed ? "completed" : "";
   const checkIcon = mutableTodo.completed ? (
@@ -10,6 +11,12 @@ const TodoItem = ({ todo, setTodos, todos }) => {
     ""
   );
 
+  const removeTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+  console.log(removeTodo);
   const toggleCompleted = () => {
     setMutableTodo({ ...mutableTodo, completed: !mutableTodo.completed });
     const updatedTodos = todos.map((item) =>
@@ -34,6 +41,11 @@ const TodoItem = ({ todo, setTodos, todos }) => {
           </span>
         </div>
         <p>{mutableTodo.content}</p>
+        <div className="remove-btn">
+          <button className="remove" onClick={() => removeTodo(index)}>
+            <img src={IconCross} alt="remove" />
+          </button>
+        </div>
       </li>
     </>
   );
