@@ -172,6 +172,7 @@ p {
 
 .todo-list-container .todo-list li.completed {
   text-decoration: line-through;
+  color: var(--very-light-grayish-blue);
 }
 .todo-list-container {
   background-color: white;
