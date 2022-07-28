@@ -193,6 +193,7 @@ p {
 
 .todo-list li {
   padding-bottom: 0.5rem;
+  /* border-bottom: 0.1rem solid var(--very-light-grayish-blue); */
 }
 
 .todo-input {
@@ -254,6 +255,10 @@ li:hover .remove {
 
 .wrapper.dark .remove {
   background: white;
+}
+
+li .remove-btn {
+  float: left;
 }
 footer {
   width: 100%;
