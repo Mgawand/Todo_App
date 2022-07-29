@@ -127,8 +127,8 @@ h1 {
    justify-content: stretch;
    gap: 2rem;
    padding: 2rem;
-   margin-bottom: 2rem;
    border-radius: 1rem;
+   margin-bottom: 2rem;
 }
 .wrapper.dark .form-container {
    background-color: var(--very-dark-grayish-blue);
@@ -136,7 +136,6 @@ h1 {
 .wrapper.dark form input[type='text'] {
    background-color: var(--very-dark-grayish-blue);
 }
-
 .checkbox-border {
    border-radius: 50%;
    border-color: linear-gradient(
@@ -215,6 +214,8 @@ p {
    justify-content: stretch;
    align-items: center;
    gap: 2rem;
+   margin-bottom: 2rem;
+   border-bottom: 0.1rem solid var(--very-light-grayish-blue);
 }
 .todo-list li.completed .checkbox-border-wrap {
    background: transparent;
