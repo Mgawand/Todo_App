@@ -16,7 +16,6 @@ const TodoItem = ({ todo, index, setTodos, todos }) => {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
-  console.log(removeTodo);
   const toggleCompleted = () => {
     setMutableTodo({ ...mutableTodo, completed: !mutableTodo.completed });
     const updatedTodos = todos.map((item) =>

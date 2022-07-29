@@ -13,7 +13,10 @@ const TodoForm = ({ todos, setTodos }) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (todoInput) {
+    const existing = todos.find((todo) => todo.content === todoInput);
+    if (existing) {
+      alert("already exists");
+    } else if (todoInput) {
       const newTodo = {
         id: idGenerate(todos),
         content: todoInput.trim(),

@@ -18,6 +18,12 @@ const data = [
   },
 ];
 
+// data.map((item, index) => {
+//   if(!dataOptions.some(({value,label}) =>  label == content)){
+//     dataOptions.push({value: index, label:content})
+//   }
+// });
+
 function App() {
   const [todos, setTodos] = useState(data);
   const [filter, setFilter] = useState("all");
